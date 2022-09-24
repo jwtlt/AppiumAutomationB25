@@ -1,13 +1,11 @@
 package com.cydeo.tests;
 
+import com.cydeo.pages.*;
 import com.cydeo.utils.ConfigurationReader;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EtsyChromeTest extends WebTestBase {
 
@@ -43,6 +41,12 @@ public class EtsyChromeTest extends WebTestBase {
 
     }
 
+    @Test
+    public void searchForDesk(){
+        driver.get("https://www.etsy.com");
+        WebElement searchField = driver.findElement(By.name("search_query"));
+        searchField.sendKeys("wooden desk" + Keys.ENTER);
 
+    }
 
 }

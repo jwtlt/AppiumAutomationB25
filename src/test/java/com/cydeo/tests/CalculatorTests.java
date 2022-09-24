@@ -28,7 +28,7 @@ public class CalculatorTests {
         URL url = new URL("http://localhost:4723/wd/hub");
 
         //launch appiumDriver
-        AppiumDriver<MobileElement> driver = new AndroidDriver<MobileElement>(url, caps);
+        AppiumDriver<MobileElement> driver = new AndroidDriver<>(url, caps);
 
        // System.out.println(driver.getTitle());
         System.out.println(driver.getDeviceTime());
