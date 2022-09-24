@@ -24,12 +24,6 @@ public abstract class WebTestBase {
 
     protected WebDriver driver;
 
-    @FindBy(name = "search_query")
-    public WebElement searchField;
-
-    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div[17]/div[1]/div/div/ul")
-    public List<WebElement> items;
-
     @BeforeEach
     public void setUp() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -44,6 +38,9 @@ public abstract class WebTestBase {
         driver = new RemoteWebDriver(url, desiredCapabilities);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
+
+
+
 
     @AfterEach
     public void tearDown() {

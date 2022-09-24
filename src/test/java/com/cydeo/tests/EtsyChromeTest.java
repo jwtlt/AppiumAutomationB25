@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import java.util.*;
+
 public class EtsyChromeTest extends WebTestBase {
 
     @Test
@@ -42,11 +44,9 @@ public class EtsyChromeTest extends WebTestBase {
     }
 
     @Test
-    public void searchForDesk(){
+    public void searchForDesk() {
         driver.get("https://www.etsy.com");
         WebElement searchField = driver.findElement(By.name("search_query"));
         searchField.sendKeys("wooden desk" + Keys.ENTER);
-
     }
-
 }

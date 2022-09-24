@@ -18,8 +18,7 @@ public class CalculatorOperationsTest {
 
     AppiumDriver<MobileElement> driver;
 
-
-    //@BeforeEach
+    @BeforeEach
     public void setUp() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         // caps.setCapability("deviceName", "Pixel 3");
